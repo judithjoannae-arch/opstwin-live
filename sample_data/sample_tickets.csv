@@ -1,0 +1,9 @@
+title,description,category,priority,requester_name,requester_email,created_minutes_ago
+Library Wi-Fi drops every few minutes,"Connection drops on floor 2 of the main library, several students affected.",network,P2,Aisha Rahman,aisha.rahman@student.campus.example,95
+Locked out after password change,Changed my password this morning and now every login says invalid credentials.,account,,Ben Carter,ben.carter@student.campus.example,80
+Request MATLAB install on lab PC 14,Need MATLAB R2026a for the signal processing lab on Thursday.,software,P4,Chloe Martin,chloe.martin@staff.campus.example,70
+Projector in room B204 shows no signal,HDMI input not detected; lecture starts at 2pm.,hardware,P2,Diego Alvarez,diego.alvarez@staff.campus.example,55
+Exam platform unavailable,The online exam platform returns 502 errors for everyone in the CS exam hall.,critical_infrastructure,P1,Elif Kaya,elif.kaya@staff.campus.example,40
+VPN won't connect from home,Client hangs at 'authenticating' since yesterday evening.,network,,Farah Haddad,farah.haddad@student.campus.example,30
+Email client crashes on startup,Outlook closes immediately after the splash screen on my office PC.,software,P3,Gabriel Rossi,gabriel.rossi@staff.campus.example,20
+Laptop won't charge,Loan laptop LT-0412 does not charge with the supplied adapter.,hardware,,Hiro Tanaka,hiro.tanaka@student.campus.example,10

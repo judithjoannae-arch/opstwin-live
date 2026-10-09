@@ -1,0 +1,22 @@
+services:
+  backend:
+    build: ./backend
+    environment:
+      OPSTWIN_ENV: ${OPSTWIN_ENV:-development}
+      OPSTWIN_CORS_ORIGINS: http://localhost:8080
+      OPSTWIN_DEMO_PASSWORD: ${OPSTWIN_DEMO_PASSWORD:-}
+    volumes:
+      - opstwin-data:/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 10s
+      retries: 5
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+volumes:
+  opstwin-data:

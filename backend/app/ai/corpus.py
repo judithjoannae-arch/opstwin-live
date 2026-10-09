@@ -1,0 +1,73 @@
+"""Starter training examples written for a campus IT desk (labelled, illustrative).
+
+They give the classifier a sensible vocabulary before enough real tickets exist.
+Real, reviewed tickets are added on top every time the model retrains.
+Each entry: (text, category, priority).
+"""
+STARTER = [
+    # account and password
+    ("forgot my password and the reset email never arrives", "account", "P3"),
+    ("account locked after too many login attempts", "account", "P3"),
+    ("cannot sign in to the student portal invalid credentials", "account", "P3"),
+    ("mfa code not arriving on my phone cannot log in", "account", "P3"),
+    ("two factor authentication app lost new phone", "account", "P3"),
+    ("my username shows the wrong name in email", "account", "P4"),
+    ("need access to the shared drive for my department", "account", "P4"),
+    ("password expired and the change page gives an error", "account", "P3"),
+    ("locked out of my email before my exam submission deadline", "account", "P2"),
+    ("staff account disabled cannot access payroll system", "account", "P2"),
+    ("single sign on loop keeps redirecting to login page", "account", "P3"),
+    ("request a guest account for a visiting lecturer", "account", "P4"),
+    # network
+    ("wifi keeps dropping in the library every few minutes", "network", "P3"),
+    ("no internet connection in lecture hall b", "network", "P2"),
+    ("eduroam rejects my credentials on my laptop", "network", "P3"),
+    ("vpn will not connect from home stuck authenticating", "network", "P3"),
+    ("very slow network in the residence block", "network", "P3"),
+    ("ethernet port in office not working no link light", "network", "P3"),
+    ("whole computer lab has lost network connectivity", "network", "P2"),
+    ("wireless signal weak on the third floor", "network", "P4"),
+    ("cannot reach any websites dns not resolving", "network", "P2"),
+    ("network drops during online exam in hall c", "network", "P1"),
+    ("wifi not connecting on my phone in the cafeteria", "network", "P4"),
+    ("ip address conflict message on my pc", "network", "P3"),
+    # software
+    ("please install matlab on lab pc for my course", "software", "P4"),
+    ("outlook crashes on startup every time", "software", "P3"),
+    ("licence error when opening statistics software", "software", "P3"),
+    ("teams meetings will not start camera error", "software", "P3"),
+    ("printer driver missing after windows update", "software", "P3"),
+    ("need adobe reader installed on office computer", "software", "P4"),
+    ("application freezes when saving large files", "software", "P3"),
+    ("excel macros blocked by security settings", "software", "P4"),
+    ("learning management system shows error when uploading assignment", "software", "P2"),
+    ("python and visual studio code install request for lab", "software", "P4"),
+    ("antivirus popup says threat detected", "software", "P2"),
+    ("browser keeps opening unwanted pages", "software", "P3"),
+    # hardware
+    ("projector in room b204 shows no signal", "hardware", "P2"),
+    ("laptop will not charge with the adapter", "hardware", "P3"),
+    ("lab pc will not boot black screen", "hardware", "P3"),
+    ("classroom microphone not working for lecture", "hardware", "P2"),
+    ("monitor flickering in my office", "hardware", "P4"),
+    ("keyboard keys not responding", "hardware", "P4"),
+    ("printer paper jam and offline on second floor", "hardware", "P3"),
+    ("hard disk making clicking noise", "hardware", "P2"),
+    ("docking station not detecting external monitors", "hardware", "P4"),
+    ("broken laptop screen after it fell", "hardware", "P3"),
+    ("speakers in auditorium crackling during events", "hardware", "P3"),
+    ("mouse and webcam not detected by usb ports", "hardware", "P4"),
+    # critical infrastructure
+    ("core switch in engineering block unreachable", "critical_infrastructure", "P1"),
+    ("authentication service is down for everyone", "critical_infrastructure", "P1"),
+    ("storage array alarm in the data centre", "critical_infrastructure", "P1"),
+    ("exam platform unavailable for all students", "critical_infrastructure", "P1"),
+    ("dns failures across the whole campus", "critical_infrastructure", "P1"),
+    ("email server outage nobody can send mail", "critical_infrastructure", "P1"),
+    ("power failure in server room ups alarm", "critical_infrastructure", "P1"),
+    ("website and student portal down returning 502", "critical_infrastructure", "P1"),
+    ("database server high cpu everything very slow", "critical_infrastructure", "P2"),
+    ("firewall blocking all outbound traffic", "critical_infrastructure", "P1"),
+    ("backup jobs failing on main file server", "critical_infrastructure", "P2"),
+    ("campus wide outage of the learning management system", "critical_infrastructure", "P1"),
+]
