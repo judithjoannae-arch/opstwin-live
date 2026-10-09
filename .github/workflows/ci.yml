@@ -42,7 +42,7 @@ steps:
 - name: Checkout code
 uses: actions/checkout@v4
 
-```
+
   - name: Set up Node.js
     uses: actions/setup-node@v4
     with:
@@ -65,7 +65,7 @@ uses: actions/checkout@v4
   - name: Build frontend
     working-directory: frontend
     run: npm run build
-```
+
 
 python-security:
 name: Python Security Scans
@@ -74,7 +74,7 @@ steps:
 - name: Checkout code
 uses: actions/checkout@v4
 
-```
+
   - name: Set up Python
     uses: actions/setup-python@v5
     with:
@@ -92,7 +92,7 @@ uses: actions/checkout@v4
   - name: Audit Python dependencies
     run: pip-audit -r backend/requirements.txt
     continue-on-error: true
-```
+
 
 frontend-security:
 name: Frontend Dependency Audit
@@ -101,7 +101,7 @@ steps:
 - name: Checkout code
 uses: actions/checkout@v4
 
-```
+
   - name: Set up Node.js
     uses: actions/setup-node@v4
     with:
@@ -115,7 +115,7 @@ uses: actions/checkout@v4
     working-directory: frontend
     run: npm audit --audit-level=high
     continue-on-error: true
-```
+
 
 container-security:
 name: Docker Build and Trivy Scan
@@ -124,7 +124,6 @@ steps:
 - name: Checkout code
 uses: actions/checkout@v4
 
-```
   # Configure these two repository secrets to enable Docker Hub login.
   - name: Log in to Docker Hub
     if: ${{ secrets.DOCKERHUB_USERNAME != '' && secrets.DOCKERHUB_TOKEN != '' }}
@@ -171,4 +170,4 @@ uses: actions/checkout@v4
       format: table
       severity: HIGH,CRITICAL
       exit-code: "0"
-```
+
